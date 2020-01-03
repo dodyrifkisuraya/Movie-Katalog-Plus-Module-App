@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".view.NotifActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/change_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:text="@string/change_language"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/change_language"
+        android:id="@+id/dummy_daily_reminder"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/daily_reminder"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/desc_daily"
+        app:layout_constraintTop_toBottomOf="@id/dummy_daily_reminder"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/daily_reminder_every_7_am"
+        android:layout_marginTop="4dp"/>
+
+    <Switch
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/dummy_daily_reminder"
+        android:id="@+id/daily_reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/dummy_realese"
+        app:layout_constraintTop_toBottomOf="@id/desc_daily"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/realise_reminder"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/dummy_realese"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reminder_of_films_realesed_every_day"
+        android:layout_marginTop="4dp"/>
+
+    <Switch
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/dummy_realese"
+        android:id="@+id/daily_reminder_release"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
